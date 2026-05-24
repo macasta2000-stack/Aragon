@@ -1,0 +1,7 @@
+name = "aragon"
+compatibility_date = "2026-05-24"
+
+# Sitio estático: se sirve únicamente el contenido de ./public,
+# evitando exponer .git, README ni la config del repo.
+[assets]
+directory = "./public"

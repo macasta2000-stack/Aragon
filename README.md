@@ -6,11 +6,13 @@ Estilo clásico: paleta negro + dorado + blanco, tipografías serif/display, res
 ## Estructura
 
 ```
-index.html      → toda la página (una sola vista con secciones)
-styles.css      → estilos y diseño responsive
-script.js       → menú móvil, animaciones y config de reservas
-assets/         → favicon e imágenes propias
-_headers        → cabeceras/cache para Cloudflare Pages
+public/
+  index.html    → toda la página (una sola vista con secciones)
+  styles.css    → estilos y diseño responsive
+  script.js     → menú móvil, animaciones y config de reservas
+  assets/       → favicon e imágenes propias
+  _headers      → cabeceras/cache
+wrangler.toml   → config de Cloudflare (sirve solo ./public)
 ```
 
 ## Cómo editar el contenido
@@ -30,10 +32,12 @@ _headers        → cabeceras/cache para Cloudflare Pages
 ## Probar localmente
 
 ```bash
-python3 -m http.server 8080
+python3 -m http.server 8080 --directory public
 # abrir http://localhost:8080
 ```
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare)
 
-No requiere build. Comando de build vacío, directorio de salida = raíz del repo (`/`).
+Se deploya con `npx wrangler deploy` (lo corre Cloudflare automáticamente en cada push).
+`wrangler.toml` fija el directorio de assets en `./public`, por lo que solo se publican
+los archivos del sitio (nunca `.git`, `README.md` ni la config).
