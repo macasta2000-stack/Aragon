@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barbería ROYAL — Corte clásico, estilo de rey</title>
-  <meta name="description" content="Barbería ROYAL. Cortes clásicos, arreglo de barba y afeitado a navaja con tradición y precisión. Reservá tu turno online." />
+  <title>Royal Barbería — Pilar · Pueblo Caamaño | Corte y barba</title>
+  <meta name="description" content="Royal Barbería en Pueblo Caamaño, Pilar. Cortes y barba con dedicación, todos los días de 10 a 21 h. Reservá tu turno online." />
   <meta name="theme-color" content="#0c0c0c" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Barbería ROYAL" />
-  <meta property="og:description" content="Corte clásico, estilo de rey. Reservá tu turno online." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Royal Barbería — Pueblo Caamaño, Pilar" />
+  <meta property="og:description" content="Cortes y barba con dedicación. Reservá tu turno online. Abierto todos los días de 10 a 21 h." />
+  <meta property="og:type" content="business.business" />
+  <meta property="og:locale" content="es_AR" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,12 +19,43 @@
 
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- SEO local: ficha de negocio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Royal Barbería",
+    "description": "Un espacio donde el corte y la barba se hacen con dedicación. Todo está pensado para que desconectes un rato y salgas impecable.",
+    "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=70",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Caamaño 662, Pueblo Caamaño",
+      "addressLocality": "Pilar",
+      "addressRegion": "Provincia de Buenos Aires",
+      "postalCode": "B1631",
+      "addressCountry": "AR"
+    },
+    "telephone": "+541128514625",
+    "priceRange": "$$",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    }],
+    "sameAs": [
+      "https://www.instagram.com/royal__barberia/",
+      "https://royalbarberia.setmore.com/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- ====================== HEADER / NAV ====================== -->
   <header class="site-header" id="header">
     <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="Barbería ROYAL - Inicio">
+      <a href="#inicio" class="brand" aria-label="Royal Barbería - Inicio">
         <span class="brand-mark" aria-hidden="true">R</span>
         <span class="brand-text">
           <span class="brand-name">ROYAL</span>
@@ -34,7 +66,7 @@
       <nav class="nav" id="nav">
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
-        <a href="#equipo">Equipo</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#testimonios">Opiniones</a>
         <a href="#ubicacion">Ubicación</a>
         <a href="#reservar" class="btn btn-gold nav-cta" data-book>Reservar turno</a>
@@ -51,20 +83,21 @@
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-overlay" aria-hidden="true"></div>
     <div class="container hero-content">
-      <p class="hero-eyebrow">Desde 1998 · Tradición y estilo</p>
+      <p class="hero-eyebrow">Pueblo Caamaño · Pilar</p>
       <h1 class="hero-title">Corte clásico,<br /><span class="gold">estilo de rey</span></h1>
       <p class="hero-lead">
-        En Barbería ROYAL combinamos la tradición del oficio con la precisión moderna.
-        Cortes, arreglo de barba y afeitado a navaja, en un ambiente de caballeros.
+        En Royal el corte y la barba se hacen con dedicación. Todo está pensado para que
+        desconectes un rato y salgas impecable: buen ambiente, atención precisa y ese
+        detalle que marca la diferencia.
       </p>
       <div class="hero-actions">
         <a href="#reservar" class="btn btn-gold btn-lg" data-book>Reservar turno</a>
         <a href="#servicios" class="btn btn-outline btn-lg">Ver servicios</a>
       </div>
       <ul class="hero-badges">
-        <li><strong>+25</strong> años de oficio</li>
-        <li><strong>4.9★</strong> en reseñas</li>
-        <li><strong>5</strong> barberos maestros</li>
+        <li><strong>7 días</strong> abierto de 10 a 21 h</li>
+        <li><strong>Pilar</strong> en Pueblo Caamaño</li>
+        <li><strong>Online</strong> turnos sin esperas</li>
       </ul>
     </div>
     <a href="#servicios" class="hero-scroll" aria-label="Bajar">▼</a>
@@ -89,6 +122,7 @@
         <div class="pricelist-row" role="row">
           <span class="pl-service" role="cell">
             <strong>Corte</strong>
+            <small>30 min</small>
           </span>
           <span class="pl-col" role="cell">$27.000</span>
           <span class="pl-col pl-cash" role="cell">$23.000</span>
@@ -97,7 +131,7 @@
         <div class="pricelist-row" role="row">
           <span class="pl-service" role="cell">
             <strong>Corte y barba</strong>
-            <small>Servicio de toalla caliente +$2.000</small>
+            <small>45 min · el combo más pedido</small>
           </span>
           <span class="pl-col" role="cell">$31.000</span>
           <span class="pl-col pl-cash" role="cell">$27.000</span>
@@ -106,7 +140,7 @@
         <div class="pricelist-row" role="row">
           <span class="pl-service" role="cell">
             <strong>Barba</strong>
-            <small>Servicio de toalla caliente +$2.000</small>
+            <small>20 min</small>
           </span>
           <span class="pl-col" role="cell">$23.000</span>
           <span class="pl-col pl-cash" role="cell">$19.000</span>
@@ -152,7 +186,7 @@
           <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=70" alt="Interior de la barbería" loading="lazy" />
         </figure>
         <figure class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=70" alt="Afeitado a navaja" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=70" alt="Afeitado y arreglo de barba" loading="lazy" />
         </figure>
         <figure class="gallery-item gallery-wide">
           <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=70" alt="Cliente con corte terminado" loading="lazy" />
@@ -161,39 +195,34 @@
           <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=70" alt="Herramientas de barbería" loading="lazy" />
         </figure>
       </div>
+
+      <div class="section-cta">
+        <a href="https://www.instagram.com/royal__barberia/" target="_blank" rel="noopener" class="btn btn-outline">Ver más en Instagram @royal__barberia</a>
+      </div>
     </div>
   </section>
 
-  <!-- ====================== EQUIPO ====================== -->
-  <section class="section" id="equipo">
+  <!-- ====================== NOSOTROS ====================== -->
+  <section class="section" id="nosotros">
     <div class="container">
-      <div class="section-head">
-        <span class="kicker">Quiénes somos</span>
-        <h2>Nuestros barberos</h2>
-        <p class="section-sub">Un equipo de maestros del oficio, con estilo propio.</p>
-      </div>
-
-      <div class="team-grid">
-        <article class="team-card">
-          <div class="team-photo"><img src="https://images.unsplash.com/photo-1508341591423-4347099e1f19?auto=format&fit=crop&w=600&q=70" alt="Barbero Martín" loading="lazy" /></div>
-          <h3>Martín</h3>
-          <p class="team-role">Fundador · Maestro barbero</p>
-        </article>
-        <article class="team-card">
-          <div class="team-photo"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=70" alt="Barbero Diego" loading="lazy" /></div>
-          <h3>Diego</h3>
-          <p class="team-role">Especialista en barba</p>
-        </article>
-        <article class="team-card">
-          <div class="team-photo"><img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=600&q=70" alt="Barbero Lucas" loading="lazy" /></div>
-          <h3>Lucas</h3>
-          <p class="team-role">Diseño y fades</p>
-        </article>
-        <article class="team-card">
-          <div class="team-photo"><img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=600&q=70" alt="Barbero Nico" loading="lazy" /></div>
-          <h3>Nico</h3>
-          <p class="team-role">Corte clásico</p>
-        </article>
+      <div class="about-grid">
+        <div class="about-media">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=900&q=70" alt="Ambiente de Royal Barbería" loading="lazy" />
+        </div>
+        <div class="about-text">
+          <span class="kicker">Royal</span>
+          <h2>Cortes y barba, con dedicación</h2>
+          <p>
+            En Royal todo está pensado para que desconectes un rato y salgas impecable.
+            Buen ambiente, atención precisa y ese detalle que marca la diferencia.
+          </p>
+          <ul class="about-list">
+            <li>Corte, barba y terminación con productos premium</li>
+            <li>Atención todos los días de 10 a 21 h</li>
+            <li>En Pueblo Caamaño, Pilar — fácil acceso por Panamericana ramal Pilar</li>
+          </ul>
+          <a href="#reservar" class="btn btn-gold" data-book>Reservar turno</a>
+        </div>
       </div>
     </div>
   </section>
@@ -209,19 +238,23 @@
       <div class="testimonials">
         <blockquote class="testimonial">
           <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p>"La mejor barbería de la zona. Atención impecable y el corte siempre sale perfecto."</p>
-          <footer>— Joaquín R.</footer>
+          <p>"Excelente atención y el corte siempre sale perfecto. Buen ambiente desde que entrás."</p>
+          <footer>— Cliente de Royal</footer>
         </blockquote>
         <blockquote class="testimonial">
           <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p>"El afeitado a navaja es otro nivel. Te tratan como un rey, como dice el nombre."</p>
-          <footer>— Sebastián M.</footer>
+          <p>"El arreglo de barba es otro nivel. Te toman el turno y te atienden a horario."</p>
+          <footer>— Cliente de Royal</footer>
         </blockquote>
         <blockquote class="testimonial">
           <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
-          <p>"Reservé online en un minuto y me atendieron a horario. Vuelvo siempre."</p>
-          <footer>— Pablo G.</footer>
+          <p>"Reservé online en un minuto. Detallistas con el corte y la terminación. Vuelvo siempre."</p>
+          <footer>— Cliente de Royal</footer>
         </blockquote>
+      </div>
+
+      <div class="section-cta">
+        <a href="https://www.google.com/maps/search/?api=1&query=Royal%20Barber%C3%ADa%20Pueblo%20Caama%C3%B1o%20Pilar" target="_blank" rel="noopener" class="btn btn-outline">Ver todas las reseñas en Google</a>
       </div>
     </div>
   </section>
@@ -238,30 +271,29 @@
         <div class="location-info">
           <div class="info-block">
             <h3>Dirección</h3>
-            <p>Av. Corrientes 1234<br />Ciudad Autónoma de Buenos Aires</p>
-            <a href="https://maps.google.com/?q=Barberia+Royal" target="_blank" rel="noopener" class="link-gold">Cómo llegar →</a>
+            <p>R. Caamaño 662 — Pueblo Caamaño<br />Acceso Panamericana ramal Pilar, Km 46,5<br />B1631, Pilar, Provincia de Buenos Aires</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Royal%20Barber%C3%ADa%20Pueblo%20Caama%C3%B1o%20Pilar" target="_blank" rel="noopener" class="link-gold">Cómo llegar →</a>
           </div>
           <div class="info-block">
             <h3>Horarios</h3>
             <ul class="hours">
-              <li><span>Lunes a Viernes</span><span>9:00 – 20:00</span></li>
-              <li><span>Sábados</span><span>9:00 – 18:00</span></li>
-              <li><span>Domingos</span><span>Cerrado</span></li>
+              <li><span>Lunes a Domingo</span><span>10:00 – 21:00</span></li>
+              <li><span>Abierto</span><span>Todos los días</span></li>
             </ul>
           </div>
           <div class="info-block">
             <h3>Contacto</h3>
             <p>
-              <a href="tel:+5491100000000" class="link-gold">+54 9 11 0000-0000</a><br />
-              <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" class="link-gold">WhatsApp</a> ·
-              <a href="https://instagram.com/" target="_blank" rel="noopener" class="link-gold">Instagram</a>
+              <a href="tel:+541128514625" class="link-gold">011 2851-4625</a><br />
+              <a href="https://wa.me/5491128514625" target="_blank" rel="noopener" class="link-gold">WhatsApp</a> ·
+              <a href="https://www.instagram.com/royal__barberia/" target="_blank" rel="noopener" class="link-gold">Instagram</a>
             </p>
           </div>
         </div>
         <div class="location-map">
           <iframe
-            title="Mapa de Barbería ROYAL"
-            src="https://www.google.com/maps?q=Av.+Corrientes+1234+Buenos+Aires&output=embed"
+            title="Mapa de Royal Barbería — Pueblo Caamaño"
+            src="https://www.google.com/maps?q=R.+Caama%C3%B1o+662+Pueblo+Caama%C3%B1o+Pilar&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -274,14 +306,13 @@
     <div class="container book-inner">
       <div class="section-head">
         <span class="kicker">Reservá online</span>
-        <h2>Pedí tu turno en Barbería ROYAL</h2>
-        <p class="section-sub">Elegí el servicio, el barbero y el horario que te quede cómodo. Confirmación inmediata.</p>
+        <h2>Pedí tu turno en Royal Barbería</h2>
+        <p class="section-sub">Elegí el servicio y el horario que te quede cómodo. Confirmación inmediata.</p>
       </div>
 
       <!-- Reserva online con Setmore.
            El botón usa la URL configurada en script.js (SETMORE_URL).
-           Para EMBEBER el calendario completo, descomentá el iframe de abajo
-           y reemplazá la URL por tu enlace de Setmore (Settings → Booking Page). -->
+           Para EMBEBER el calendario completo, descomentá el iframe de abajo. -->
       <div class="book-card">
         <a href="#" class="btn btn-gold btn-xl" data-book>Reservar turno ahora</a>
         <p class="book-note">Sistema de reservas con Setmore · Sin costo, sin registrarte.</p>
@@ -289,7 +320,7 @@
 
       <!--
       <div class="book-embed">
-        <iframe title="Reservar turno" src="https://TU-PAGINA.setmore.com" loading="lazy"></iframe>
+        <iframe title="Reservar turno" src="https://royalbarberia.setmore.com" loading="lazy"></iframe>
       </div>
       -->
     </div>
@@ -308,18 +339,18 @@
       <nav class="footer-nav">
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
-        <a href="#equipo">Equipo</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#ubicacion">Ubicación</a>
         <a href="#reservar" data-book>Reservar</a>
       </nav>
       <div class="footer-social">
-        <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
-        <a href="https://wa.me/5491100000000" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
-        <a href="tel:+5491100000000" aria-label="Teléfono">Teléfono</a>
+        <a href="https://www.instagram.com/royal__barberia/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+        <a href="https://wa.me/5491128514625" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+        <a href="tel:+541128514625" aria-label="Teléfono">Teléfono</a>
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© <span id="year"></span> Barbería ROYAL. Todos los derechos reservados.</p>
+      <p>© <span id="year"></span> Royal Barbería · Pueblo Caamaño, Pilar. Todos los derechos reservados.</p>
     </div>
   </footer>
 

@@ -1,7 +1,16 @@
-# Barbería ROYAL — Landing page
+# Royal Barbería — Landing page
 
-Landing page estática (HTML/CSS/JS, sin build) para **Barbería ROYAL**.
+Landing page estática (HTML/CSS/JS, sin build) para **Royal Barbería** (Pueblo Caamaño, Pilar).
 Estilo clásico: paleta negro + dorado + blanco, tipografías serif/display, reservas con Setmore.
+
+## Datos del negocio (ya cargados)
+
+- **Reservas:** https://royalbarberia.setmore.com
+- **Instagram:** [@royal__barberia](https://www.instagram.com/royal__barberia/)
+- **Dirección:** R. Caamaño 662 — Pueblo Caamaño, Pilar (B1631), Acceso Panamericana ramal Pilar Km 46,5
+- **Teléfono / WhatsApp:** 011 2851-4625
+- **Horarios:** todos los días de 10 a 21 h
+- **Precios:** Corte $27.000/$23.000 · Corte y barba $31.000/$27.000 · Barba $23.000/$19.000 (transferencia / efectivo)
 
 ## Estructura
 
@@ -17,17 +26,20 @@ wrangler.toml   → config de Cloudflare (sirve solo ./public)
 
 ## Cómo editar el contenido
 
-- **Reservas (Setmore):** abrí `script.js` y cambiá `SETMORE_URL` por el enlace de tu
-  Booking Page (Setmore → Settings → Booking Page). Todos los botones "Reservar" lo usan.
-  Para embeber el calendario completo, descomentá el bloque `book-embed` en `index.html`.
-- **Precios:** sección `#servicios` en `index.html` (tabla `pricelist`). Ya cargados los
+- **Reservas (Setmore):** el enlace real (`https://royalbarberia.setmore.com`) está en
+  `script.js` como `SETMORE_URL`. Todos los botones "Reservar" lo usan. Para embeber el
+  calendario completo, descomentá el bloque `book-embed` en `index.html`.
+- **Precios:** sección `#servicios` en `index.html` (tabla `pricelist`). Cargados los
   valores reales (transferencia / efectivo) y el alias `ROYAL.BARBERIA`.
-- **Equipo, testimonios, dirección, horarios y redes:** editá los textos directamente en
-  `index.html` (secciones `#equipo`, `#testimonios`, `#ubicacion`).
+- **Nosotros, testimonios, dirección, horarios y redes:** editá los textos directamente en
+  `index.html` (secciones `#nosotros`, `#testimonios`, `#ubicacion`).
+- **Opiniones:** los testimonios son de muestra; el botón "Ver todas las reseñas en Google"
+  lleva al perfil real. Si querés, reemplazá las frases por reseñas textuales de clientes.
 - **Logo y fotos:** las imágenes de muestra usan Unsplash. Reemplazalas por fotos propias
-  poniéndolas en `assets/` y cambiando los `src`. Para el logo, sustituí el `<span class="brand-mark">R</span>`
-  por `<img src="assets/logo.svg" ...>`.
-- **Teléfono/WhatsApp:** buscá `5491100000000` y reemplazá por el número real.
+  (del local / Instagram) poniéndolas en `assets/` y cambiando los `src`. Para el logo,
+  sustituí el `<span class="brand-mark">R</span>` por `<img src="assets/logo.svg" ...>`.
+- **SEO local:** los datos del negocio también están en el bloque `application/ld+json`
+  del `<head>` (ficha `HairSalon`). Si cambia un dato, actualizalo también ahí.
 
 ## Probar localmente
 

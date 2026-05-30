@@ -3,10 +3,9 @@
    =================================================================== */
 
 /* ---- CONFIG: enlace de reservas Setmore ----
-   Reemplazá por la URL de tu Booking Page de Setmore.
-   La encontrás en Setmore → Settings → Booking Page → tu enlace
-   (ej: https://barberiaroyal.setmore.com).                           */
-const SETMORE_URL = "https://barberiaroyal.setmore.com";
+   Booking Page real de Royal Barbería.
+   (Setmore → Settings → Booking Page → tu enlace)                    */
+const SETMORE_URL = "https://royalbarberia.setmore.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Año dinámico en el footer
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Animación de aparición al hacer scroll
   const revealEls = document.querySelectorAll(
-    ".section-head, .service-card, .pricelist, .gallery-item, .team-card, .testimonial, .info-block, .book-card"
+    ".section-head, .service-card, .pricelist, .gallery-item, .about-media, .about-text, .team-card, .testimonial, .info-block, .book-card"
   );
   revealEls.forEach((el) => el.classList.add("reveal"));
 
