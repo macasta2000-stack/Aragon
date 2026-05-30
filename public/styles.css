@@ -65,21 +65,20 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.1; }
 .btn-lg { padding: 16px 34px; font-size: .85rem; }
 .btn-xl { padding: 19px 46px; font-size: .95rem; }
 
-/* ---------- Brand mark ---------- */
+/* ---------- Brand / logotipo ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark {
-  font-family: var(--serif); font-weight: 800; font-style: italic;
-  color: var(--gold); font-size: 1.7rem;
-  width: 46px; height: 46px; display: grid; place-items: center;
-  border: 2px solid var(--gold); border-radius: 50%;
+.brand-logo { height: 40px; width: auto; display: block; }
+/* Logotipo "ROYAL BARBERÍA": ROYAL fino + BARBERÍA bold (como el logo de marca) */
+.brand-word {
+  font-family: var(--body);
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  letter-spacing: .22em;
+  color: var(--white);
+  white-space: nowrap;
   line-height: 1;
 }
-.brand-text { display: flex; flex-direction: column; line-height: 1; }
-.brand-name {
-  font-family: var(--display); font-size: 1.5rem; letter-spacing: .18em;
-  color: var(--white);
-}
-.brand-sub { font-size: .6rem; letter-spacing: .42em; color: var(--gold); margin-top: 2px; }
+.brand-thin { font-weight: 300; }
+.brand-bold { font-weight: 700; }
 
 /* ---------- Header ---------- */
 .site-header {
