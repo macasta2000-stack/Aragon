@@ -557,8 +557,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .pl-col { font-size: 1.05rem; min-width: 68px; }
   .pl-service strong { font-size: 1rem; }
   .pl-service small { font-size: .68rem; }
-  .gallery { grid-template-columns: 1fr; grid-auto-rows: 220px; }
-  .gallery-portrait { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; gap: 8px; }
+  .gallery-portrait { grid-template-columns: 1fr 1fr; gap: 8px; }
   .gallery-wide { grid-column: span 1; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .team-grid-trio, .team-grid-duo { grid-template-columns: 1fr; gap: 24px; }
