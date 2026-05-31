@@ -67,8 +67,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 200px; width: auto; display: block; transition: height .3s ease; }
-.site-header.scrolled .brand-logo { height: 140px; }
+.brand-logo { height: 240px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-logo { height: 180px; }
 .footer-logo { height: 160px; width: auto; display: block; margin-bottom: 8px; }
 .footer-tag { color: var(--grey); font-size: .85rem; font-style: italic; }
 .brand-name {
@@ -88,8 +88,9 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(0,0,0,.5);
   padding: 8px 0;
 }
-.header-inner { display: flex; align-items: center; justify-content: space-between; }
-.nav { display: flex; align-items: center; gap: 30px; }
+.header-inner { display: flex; align-items: center; justify-content: center; position: relative; }
+.brand { margin: 0 auto; }
+.nav { display: flex; align-items: center; gap: 30px; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); }
 .nav a {
   font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--white); transition: color .2s ease; position: relative;
@@ -122,7 +123,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
     radial-gradient(circle at 30% 30%, rgba(230,168,23,.12), transparent 55%),
     linear-gradient(180deg, rgba(12,12,12,.78) 0%, rgba(12,12,12,.7) 40%, rgba(12,12,12,.95) 100%);
 }
-.hero-content { position: relative; z-index: 2; padding: 120px 22px 80px; max-width: 760px; }
+.hero-content { position: relative; z-index: 2; padding: 280px 22px 80px; max-width: 760px; }
 .hero-eyebrow {
   font-size: .8rem; letter-spacing: .3em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 18px;
@@ -444,7 +445,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .breadcrumb a:hover { opacity: .75; }
 .breadcrumb span { margin: 0 6px; }
 
-.service-page { padding: 130px 0 80px; }
+.service-page { padding: 300px 0 80px; }
 .service-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; margin-bottom: 80px; }
 .service-hero-text .kicker { display: inline-block; margin-bottom: 14px; }
 .service-hero-text h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 22px; font-weight: 700; letter-spacing: .03em; }
@@ -474,7 +475,7 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
 .service-cta-block p { color: var(--grey); margin-bottom: 24px; }
 
 /* Páginas índice de servicios */
-.service-index-hero { padding: 130px 0 80px; }
+.service-index-hero { padding: 300px 0 80px; }
 .service-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-bottom: 60px; }
 .service-card {
   background: var(--black-3); border: 1px solid var(--line); border-radius: var(--radius);
@@ -530,19 +531,17 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .pl-col { min-width: 80px; font-size: 1.2rem; }
   .pl-col:not(.pl-cash) { margin-right: 0; }
 
-  /* Logo CENTRADO en mobile, toggle absoluto a la derecha */
-  .header-inner { justify-content: center; position: relative; }
-  .brand { margin: 0 auto; }
-  .brand-logo { height: 100px; }
-  .site-header.scrolled .brand-logo { height: 72px; }
+  /* Logo CENTRADO en mobile (ya hereda center desde base), toggle absoluto a la derecha */
+  .brand-logo { height: 130px; }
+  .site-header.scrolled .brand-logo { height: 96px; }
   .nav-toggle { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); }
 
   /* Header padding más chico para que el logo no robe altura */
   .site-header { padding: 6px 0; }
   .site-header.scrolled { padding: 4px 0; }
 
-  /* Hero compensa el header fijo (logo centrado más grande ~115px) */
-  .hero-content { padding: 145px 22px 70px; }
+  /* Hero compensa el header fijo (logo centrado más grande ~145px) */
+  .hero-content { padding: 170px 22px 70px; }
   .hero-title { letter-spacing: .04em; }
   .hero-lead { font-size: 1rem; }
   .hero-badges { gap: 26px 36px; padding-top: 22px; }
@@ -556,8 +555,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .footer-logo { height: 120px; }
 
   /* Service pages mobile */
-  .service-page { padding: 130px 0 60px; }
-  .service-index-hero { padding: 130px 0 60px; }
+  .service-page { padding: 180px 0 60px; }
+  .service-index-hero { padding: 180px 0 60px; }
   .service-hero-img { aspect-ratio: 4/5; max-width: 360px; }
 
   /* Products catálogo en tablet */
@@ -591,10 +590,10 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .team-grid-trio, .team-grid-duo { grid-template-columns: 1fr; gap: 24px; }
   .team-grid-trio .team-photo, .team-grid-duo .team-photo { max-width: 320px; margin: 0 auto 16px; }
-  .brand-logo { height: 84px; }
-  .site-header.scrolled .brand-logo { height: 60px; }
+  .brand-logo { height: 105px; }
+  .site-header.scrolled .brand-logo { height: 78px; }
   .footer-logo { height: 100px; }
-  .hero-content { padding: 130px 18px 60px; }
+  .hero-content { padding: 150px 18px 60px; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); letter-spacing: .03em; }
   .hero-eyebrow { font-size: .7rem; letter-spacing: .22em; }
   .hero-lead { font-size: .95rem; }
