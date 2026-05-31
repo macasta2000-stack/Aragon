@@ -67,9 +67,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 56px; width: auto; display: block; transition: height .3s ease; }
-.site-header.scrolled .brand-logo { height: 44px; }
-.footer-logo { height: 64px; width: auto; display: block; }
+.brand-logo { height: 72px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-logo { height: 52px; }
+.footer-logo { height: 80px; width: auto; display: block; margin-bottom: 8px; }
+.footer-tag { color: var(--grey); font-size: .85rem; font-style: italic; }
 .brand-name {
   font-family: var(--display); font-size: 1.5rem; letter-spacing: .18em;
   color: var(--white);
@@ -78,7 +79,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 /* ---------- Header ---------- */
 .site-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(12, 12, 12, 0);
+  background: linear-gradient(180deg, rgba(12,12,12,.78) 0%, rgba(12,12,12,.35) 70%, rgba(12,12,12,0) 100%);
   transition: background .3s ease, box-shadow .3s ease, padding .3s ease;
   padding: 14px 0;
 }
@@ -278,9 +279,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 /* ---------- Footer ---------- */
 .site-footer { background: #080808; padding-top: 56px; border-top: 1px solid var(--line); }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center; padding-bottom: 36px; }
-.footer-brand { display: flex; align-items: center; gap: 14px; }
-.footer-brand .brand-name { font-family: var(--display); font-size: 1.6rem; letter-spacing: .2em; }
-.footer-brand p { color: var(--grey); font-size: .85rem; }
+.footer-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .footer-nav { display: flex; gap: 22px; flex-wrap: wrap; }
 .footer-nav a { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--grey); transition: color .2s; }
 .footer-nav a:hover { color: var(--gold); }
@@ -339,7 +338,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   .gallery { grid-template-columns: 1fr; grid-auto-rows: 220px; }
   .gallery-wide { grid-column: span 1; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .brand-logo { height: 44px; }
+  .brand-logo { height: 56px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
