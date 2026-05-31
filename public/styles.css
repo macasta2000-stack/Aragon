@@ -67,9 +67,9 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 72px; width: auto; display: block; transition: height .3s ease; }
-.site-header.scrolled .brand-logo { height: 52px; }
-.footer-logo { height: 80px; width: auto; display: block; margin-bottom: 8px; }
+.brand-logo { height: 96px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-logo { height: 70px; }
+.footer-logo { height: 96px; width: auto; display: block; margin-bottom: 8px; }
 .footer-tag { color: var(--grey); font-size: .85rem; font-style: italic; }
 .brand-name {
   font-family: var(--display); font-size: 1.5rem; letter-spacing: .18em;
@@ -207,7 +207,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; gap: 14px;
 }
 .gallery-item { overflow: hidden; border-radius: var(--radius); position: relative; }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease, filter .5s ease; filter: grayscale(.25); }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center 30%; transition: transform .5s ease, filter .5s ease; filter: grayscale(.25); }
 .gallery-item:hover img { transform: scale(1.07); filter: grayscale(0); }
 .gallery-tall { grid-row: span 2; }
 .gallery-wide { grid-column: span 2; }
@@ -227,7 +227,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   aspect-ratio: 3/4; overflow: hidden; border-radius: var(--radius);
   border: 1px solid var(--line); margin-bottom: 16px;
 }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(.5); transition: filter .4s ease, transform .5s ease; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; filter: grayscale(.5); transition: filter .4s ease, transform .5s ease; }
 .team-card:hover .team-photo img { filter: grayscale(0); transform: scale(1.05); }
 .team-card h3 { font-size: 1.4rem; }
 .team-role { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
@@ -272,24 +272,27 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 }
 .zones-grid li:hover { border-color: var(--gold); color: var(--gold); background: rgba(230,168,23,.05); }
 
-/* ---------- FAQ ---------- */
-.faq-list { max-width: 780px; margin: 0 auto; display: grid; gap: 14px; }
+/* ---------- FAQ (compacta) ---------- */
+.section-faq { padding: 60px 0; background: var(--black-2); }
+.faq-title { text-align: center; font-size: 1.4rem; letter-spacing: .12em; color: var(--gold); margin-bottom: 28px; }
+.faq-list { max-width: 700px; margin: 0 auto; display: grid; gap: 8px; }
 .faq-item {
-  background: var(--black-3); border: 1px solid var(--line); border-radius: var(--radius);
-  padding: 22px 26px; transition: border-color .2s;
+  background: transparent; border-bottom: 1px solid var(--line); border-radius: 0;
+  padding: 14px 4px; transition: border-color .2s;
 }
 .faq-item[open] { border-color: var(--gold); }
 .faq-item summary {
-  cursor: pointer; list-style: none; font-family: var(--display); letter-spacing: .03em;
-  font-size: 1.05rem; color: var(--white); position: relative; padding-right: 32px;
+  cursor: pointer; list-style: none; font-family: var(--body); letter-spacing: .02em;
+  font-size: .95rem; color: var(--white); position: relative; padding-right: 32px;
+  font-weight: 500;
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
   content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
-  color: var(--gold); font-size: 1.5rem; font-weight: 300; transition: transform .25s;
+  color: var(--gold); font-size: 1.3rem; font-weight: 300; transition: transform .25s;
 }
 .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
-.faq-item p { color: var(--grey); margin-top: 14px; font-size: .95rem; line-height: 1.65; }
+.faq-item p { color: var(--grey); margin-top: 10px; font-size: .9rem; line-height: 1.55; }
 
 /* ---------- Location ---------- */
 .location-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: stretch; }
@@ -304,12 +307,60 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .location-map { min-height: 360px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
 .location-map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; filter: grayscale(.6) invert(.92) contrast(.9); }
 
+/* ---------- Branches (sucursales) ---------- */
+.branches { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.branch-card {
+  background: var(--black-3); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 32px; display: flex; flex-direction: column; gap: 24px;
+  transition: border-color .2s;
+}
+.branch-card:hover { border-color: var(--gold); }
+.branch-head { border-bottom: 1px solid var(--line); padding-bottom: 18px; }
+.branch-kicker {
+  display: inline-block; font-size: .72rem; letter-spacing: .25em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.branch-head h3 { font-size: 1.8rem; letter-spacing: .05em; color: var(--white); }
+.branch-info { display: grid; gap: 22px; }
+.branch-info h4 { font-size: .85rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.branch-info p, .branch-info .hours { color: var(--grey); font-size: .92rem; line-height: 1.55; }
+.branch-info .hours { list-style: none; display: grid; gap: 4px; }
+.branch-info .hours li { display: flex; justify-content: space-between; gap: 16px; }
+.branch-map { aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.branch-map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(.6) invert(.92) contrast(.9); }
+.branch-cta { align-self: center; margin-top: 8px; }
+@media (max-width: 880px) { .branches { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ---------- Team — subgrupos por sucursal ---------- */
+.team-branch + .team-branch { margin-top: 64px; }
+.team-branch-title {
+  text-align: center; margin-bottom: 28px; font-size: 1rem; letter-spacing: .08em;
+}
+.team-branch-tag {
+  display: inline-block; font-family: var(--display); font-size: .82rem; letter-spacing: .25em;
+  text-transform: uppercase; color: var(--gold); padding: 8px 22px;
+  border: 1px solid var(--line); border-radius: 999px;
+}
+
+/* Duo team layout (Las Piedras: 2 barberos) */
+.team-grid-duo {
+  grid-template-columns: repeat(2, minmax(0, 320px));
+  justify-content: center; gap: 36px;
+}
+.team-grid-duo .team-photo { aspect-ratio: 4/5; }
+@media (max-width: 560px) { .team-grid-duo { grid-template-columns: 1fr; gap: 28px; } }
+
+.footer-naps { color: var(--grey); font-size: .82rem; line-height: 1.65; margin-bottom: 12px; }
+.footer-naps strong { color: var(--gold); }
+
 /* ---------- Booking ---------- */
 .section-book {
   background:
-    linear-gradient(rgba(12,12,12,.9), rgba(12,12,12,.96)),
-    url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=70") center/cover fixed;
+    radial-gradient(circle at 30% 20%, rgba(230,168,23,.08), transparent 60%),
+    linear-gradient(180deg, var(--black) 0%, var(--black-2) 100%);
   text-align: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 .book-card { display: inline-flex; flex-direction: column; align-items: center; gap: 16px; }
 .book-note { font-size: .82rem; letter-spacing: .08em; color: var(--grey); text-transform: uppercase; }
@@ -436,7 +487,7 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .gallery-portrait { grid-template-columns: 1fr; }
   .gallery-wide { grid-column: span 1; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-  .brand-logo { height: 56px; }
+  .brand-logo { height: 72px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

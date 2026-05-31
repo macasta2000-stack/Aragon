@@ -32,59 +32,94 @@
   <link rel="icon" href="assets/r-dorado.png" type="image/png" />
   <link rel="apple-touch-icon" href="assets/r-dorado.png" />
 
-  <!-- Datos estructurados: negocio local para Google -->
+  <!-- Datos estructurados: organización paraguas + 2 sucursales (HairSalon) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HairSalon",
+    "@type": "Organization",
     "name": "Royal Barbería",
-    "image": "https://royalbarberia.com/assets/imagotipo-blanco.png",
     "url": "https://royalbarberia.com/",
-    "telephone": "+5491131694389",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Av. Caamaño 662",
-      "addressLocality": "Villa Rosa, Pilar",
-      "postalCode": "B1631",
-      "addressRegion": "Buenos Aires",
-      "addressCountry": "AR"
-    },
-    "areaServed": [
-      {"@type":"Place","name":"Villa Rosa"},
-      {"@type":"Place","name":"La Lonja"},
-      {"@type":"Place","name":"Pueblo Caamaño"},
-      {"@type":"Place","name":"Manuel Alberti"},
-      {"@type":"Place","name":"Manzanares"},
-      {"@type":"Place","name":"Pilar"}
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Servicios Royal Barbería",
-      "itemListElement": [
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte de pelo clásico"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/corte-clasico/"},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fade / Degradé"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/fade/"},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Arreglo y diseño de barba"},"price":"23000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/barba/"},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte + Barba (combo)"},"price":"31000","priceCurrency":"ARS"},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Afeitado a navaja con toalla caliente"},"price":"23000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/afeitado-a-navaja/"},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte para niños"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/corte-ninos/"}
-      ]
-    },
-    "openingHoursSpecification": [
+    "logo": "https://royalbarberia.com/assets/imagotipo-blanco.png",
+    "sameAs": ["https://royalbarberia.setmore.com/", "https://royalbarberialaspiedras.setmore.com/"],
+    "subOrganization": [
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-        "opens": "10:00",
-        "closes": "21:00"
+        "@type": "HairSalon",
+        "@id": "https://royalbarberia.com/#caamano",
+        "name": "Royal Barbería — Sucursal Caamaño",
+        "image": "https://royalbarberia.com/assets/local-interior.jpg",
+        "url": "https://royalbarberia.com/#sucursales",
+        "telephone": "+5491131694389",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Caamaño 662",
+          "addressLocality": "Villa Rosa, Pilar",
+          "postalCode": "B1631",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "areaServed": [
+          {"@type":"Place","name":"Villa Rosa"},
+          {"@type":"Place","name":"La Lonja"},
+          {"@type":"Place","name":"Pueblo Caamaño"},
+          {"@type":"Place","name":"Manuel Alberti"},
+          {"@type":"Place","name":"Manzanares"},
+          {"@type":"Place","name":"Pilar"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios — Sucursal Caamaño",
+          "itemListElement": [
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte de pelo clásico"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/corte-clasico/"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Fade / Degradé"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/fade/"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Arreglo y diseño de barba"},"price":"23000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/barba/"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte + Barba (combo)"},"price":"31000","priceCurrency":"ARS"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Afeitado a navaja con toalla caliente"},"price":"23000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/afeitado-a-navaja/"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte para niños"},"price":"27000","priceCurrency":"ARS","url":"https://royalbarberia.com/servicios/corte-ninos/"}
+          ]
+        },
+        "openingHoursSpecification": [
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"}
+        ],
+        "sameAs": ["https://royalbarberia.setmore.com/"]
       },
       {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Sunday",
-        "opens": "10:00",
-        "closes": "20:00"
+        "@type": "HairSalon",
+        "@id": "https://royalbarberia.com/#laspiedras",
+        "name": "Royal Barbería — Sucursal Las Piedras",
+        "image": "https://royalbarberia.com/assets/imagotipo-blanco.png",
+        "url": "https://royalbarberia.com/#sucursales",
+        "telephone": "+541125469531",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Golf Club Golfers 2932",
+          "addressLocality": "Las Piedras, Pilar",
+          "postalCode": "B1669",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "areaServed": [
+          {"@type":"Place","name":"Las Piedras"},
+          {"@type":"Place","name":"Del Viso"},
+          {"@type":"Place","name":"Pilar"}
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Servicios — Sucursal Las Piedras",
+          "itemListElement": [
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte"},"price":"22000","priceCurrency":"ARS"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Barba"},"price":"18000","priceCurrency":"ARS"},
+            {"@type":"Offer","itemOffered":{"@type":"Service","name":"Corte y Barba"},"price":"26000","priceCurrency":"ARS"}
+          ]
+        },
+        "openingHoursSpecification": [
+          {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"}
+        ],
+        "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"16"},
+        "sameAs": ["https://royalbarberialaspiedras.setmore.com/"]
       }
-    ],
-    "sameAs": ["https://royalbarberia.setmore.com/"]
+    ]
   }
   </script>
 </head>
@@ -101,7 +136,7 @@
         <a href="#galeria">Galería</a>
         <a href="#equipo">Equipo</a>
         <a href="#testimonios">Opiniones</a>
-        <a href="#ubicacion">Ubicación</a>
+        <a href="#sucursales">Sucursales</a>
         <a href="#reservar" class="btn btn-gold nav-cta" data-book>Reservar turno</a>
       </nav>
 
@@ -232,28 +267,49 @@
       <div class="section-head">
         <span class="kicker">Quiénes somos</span>
         <h2>Conocé al equipo</h2>
-        <p class="section-sub">Tres maestros del oficio, con estilo propio y mano firme.</p>
+        <p class="section-sub">Cinco maestros del oficio en nuestras dos sucursales.</p>
       </div>
 
-      <div class="team-grid team-grid-trio">
-        <article class="team-card">
-          <div class="team-photo"><img src="assets/david.jpeg" alt="Barbero David" loading="lazy" /></div>
-          <h3>David</h3>
-          <p class="team-role">Barbero</p>
-          <p class="team-bio">Cortes prolijos, fades impecables y afeitado a navaja con toalla caliente.</p>
-        </article>
-        <article class="team-card">
-          <div class="team-photo"><img src="assets/agustin.jpeg" alt="Barbero Agustín" loading="lazy" /></div>
-          <h3>Agustín</h3>
-          <p class="team-role">Barbero</p>
-          <p class="team-bio">Diseños modernos, líneas marcadas y perfilado de barba con atención al detalle.</p>
-        </article>
-        <article class="team-card">
-          <div class="team-photo"><img src="assets/tomas.jpeg" alt="Barbero Tomás" loading="lazy" /></div>
-          <h3>Tomás</h3>
-          <p class="team-role">Barbero</p>
-          <p class="team-bio">Corte clásico y terminación pulida. Servicio rápido sin perder precisión.</p>
-        </article>
+      <div class="team-branch">
+        <h3 class="team-branch-title"><span class="team-branch-tag">Pilar · Caamaño</span></h3>
+        <div class="team-grid team-grid-trio">
+          <article class="team-card">
+            <div class="team-photo"><img src="assets/david.jpeg" alt="Barbero David" loading="lazy" /></div>
+            <h3>David</h3>
+            <p class="team-role">Barbero</p>
+            <p class="team-bio">Cortes prolijos, fades impecables y afeitado a navaja con toalla caliente.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-photo"><img src="assets/agustin.jpeg" alt="Barbero Agustín" loading="lazy" /></div>
+            <h3>Agustín</h3>
+            <p class="team-role">Barbero</p>
+            <p class="team-bio">Diseños modernos, líneas marcadas y perfilado de barba con atención al detalle.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-photo"><img src="assets/tomas.jpeg" alt="Barbero Tomás" loading="lazy" /></div>
+            <h3>Tomás</h3>
+            <p class="team-role">Barbero</p>
+            <p class="team-bio">Corte clásico y terminación pulida. Servicio rápido sin perder precisión.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="team-branch">
+        <h3 class="team-branch-title"><span class="team-branch-tag">Pilar · Las Piedras</span></h3>
+        <div class="team-grid team-grid-duo">
+          <article class="team-card">
+            <div class="team-photo"><img src="assets/matias-laspiedras.jpeg" alt="Barbero Matías — sucursal Las Piedras" loading="lazy" /></div>
+            <h3>Matías</h3>
+            <p class="team-role">Barbero</p>
+            <p class="team-bio">Cortes con personalidad y mano firme. Reservás directo en su Setmore.</p>
+          </article>
+          <article class="team-card">
+            <div class="team-photo"><img src="assets/tomas-laspiedras.jpeg" alt="Barbero Tomás — sucursal Las Piedras" loading="lazy" /></div>
+            <h3>Tomás</h3>
+            <p class="team-role">Barbero</p>
+            <p class="team-bio">Joven talento de la sucursal Las Piedras. Cortes prolijos y atención cercana.</p>
+          </article>
+        </div>
       </div>
     </div>
   </section>
@@ -314,41 +370,30 @@
     </div>
   </section>
 
-  <!-- ====================== FAQ ====================== -->
-  <section class="section" id="faq">
+  <!-- ====================== FAQ (compacta - SEO + UX) ====================== -->
+  <section class="section section-faq" id="faq">
     <div class="container">
-      <div class="section-head">
-        <span class="kicker">Preguntas frecuentes</span>
-        <h2>Antes de tu primer turno</h2>
-      </div>
+      <h2 class="faq-title">Preguntas frecuentes</h2>
       <div class="faq-list">
         <details class="faq-item">
-          <summary>¿Necesito reservar turno o puedo ir sin cita?</summary>
-          <p>Recomendamos reservar online en <a href="https://royalbarberia.setmore.com" target="_blank" rel="noopener" class="link-gold">royalbarberia.setmore.com</a> para asegurarte horario con tu barbero favorito. Aceptamos walk-ins según disponibilidad del día.</p>
+          <summary>¿Necesito reservar turno?</summary>
+          <p>Recomendamos reservar online. Aceptamos walk-ins según disponibilidad.</p>
         </details>
         <details class="faq-item">
           <summary>¿Tienen estacionamiento?</summary>
-          <p>Sí, hay estacionamiento gratuito sobre Av. Caamaño frente al local.</p>
+          <p>Sí, gratuito sobre Av. Caamaño frente al local.</p>
         </details>
         <details class="faq-item">
           <summary>¿Atienden niños?</summary>
-          <p>Sí, hacemos corte para niños con tarifa diferenciada. Es uno de nuestros servicios más pedidos los sábados.</p>
-        </details>
-        <details class="faq-item">
-          <summary>¿Qué formas de pago aceptan?</summary>
-          <p>Efectivo, débito, crédito, transferencia y Mercado Pago. Al alias <strong>ROYAL.BARBERIA</strong> hay un descuento sobre los precios de transferencia.</p>
+          <p>Sí, desde 3 años, con paciencia y la onda del primer corte.</p>
         </details>
         <details class="faq-item">
           <summary>¿Cada cuánto conviene cortarse el pelo?</summary>
-          <p>Depende del corte. Un fade se mantiene prolijo 2 a 3 semanas; un corte clásico aguanta entre 3 y 5 semanas. Si querés que mantengamos el mismo estilo, lo ideal es venir cada 3 semanas.</p>
+          <p>Un fade se mantiene 2 a 3 semanas; un corte clásico, entre 3 y 5.</p>
         </details>
         <details class="faq-item">
-          <summary>¿Qué incluye el afeitado a navaja?</summary>
-          <p>El servicio tradicional con toalla caliente, pre-shave, espuma y afeitado al ras con navaja. Termina con toalla fría y bálsamo. Es el mismo ritual de las barberías clásicas.</p>
-        </details>
-        <details class="faq-item">
-          <summary>¿Dónde están exactamente?</summary>
-          <p>Sobre Av. Caamaño 662, B1631 Villa Rosa, partido de Pilar. A pocas cuadras de Pueblo Caamaño y a 5 minutos de los countries del eje Caamaño.</p>
+          <summary>¿Qué formas de pago aceptan?</summary>
+          <p>Efectivo, débito, crédito, transferencia y Mercado Pago. Alias: <strong>ROYAL.BARBERIA</strong>.</p>
         </details>
       </div>
     </div>
@@ -359,55 +404,96 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type":"Question","name":"¿Necesito reservar turno o puedo ir sin cita?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos reservar online en royalbarberia.setmore.com para asegurarte horario con tu barbero favorito. Aceptamos walk-ins según disponibilidad del día."}},
-      {"@type":"Question","name":"¿Tienen estacionamiento?","acceptedAnswer":{"@type":"Answer","text":"Sí, hay estacionamiento gratuito sobre Av. Caamaño frente al local."}},
-      {"@type":"Question","name":"¿Atienden niños?","acceptedAnswer":{"@type":"Answer","text":"Sí, hacemos corte para niños con tarifa diferenciada."}},
-      {"@type":"Question","name":"¿Qué formas de pago aceptan?","acceptedAnswer":{"@type":"Answer","text":"Efectivo, débito, crédito, transferencia y Mercado Pago. Alias: ROYAL.BARBERIA."}},
-      {"@type":"Question","name":"¿Cada cuánto conviene cortarse el pelo?","acceptedAnswer":{"@type":"Answer","text":"Un fade se mantiene prolijo 2 a 3 semanas; un corte clásico aguanta entre 3 y 5 semanas."}},
-      {"@type":"Question","name":"¿Qué incluye el afeitado a navaja?","acceptedAnswer":{"@type":"Answer","text":"Servicio tradicional con toalla caliente, pre-shave, espuma y afeitado al ras con navaja. Termina con toalla fría y bálsamo."}}
+      {"@type":"Question","name":"¿Necesito reservar turno?","acceptedAnswer":{"@type":"Answer","text":"Recomendamos reservar online. Aceptamos walk-ins según disponibilidad."}},
+      {"@type":"Question","name":"¿Tienen estacionamiento?","acceptedAnswer":{"@type":"Answer","text":"Sí, gratuito sobre Av. Caamaño frente al local."}},
+      {"@type":"Question","name":"¿Atienden niños?","acceptedAnswer":{"@type":"Answer","text":"Sí, desde 3 años, con paciencia y la onda del primer corte."}},
+      {"@type":"Question","name":"¿Cada cuánto conviene cortarse el pelo?","acceptedAnswer":{"@type":"Answer","text":"Un fade se mantiene 2 a 3 semanas; un corte clásico, entre 3 y 5."}},
+      {"@type":"Question","name":"¿Qué formas de pago aceptan?","acceptedAnswer":{"@type":"Answer","text":"Efectivo, débito, crédito, transferencia y Mercado Pago. Alias: ROYAL.BARBERIA."}}
     ]
   }
   </script>
 
-  <!-- ====================== UBICACIÓN ====================== -->
-  <section class="section" id="ubicacion">
+  <!-- ====================== SUCURSALES ====================== -->
+  <section class="section" id="sucursales">
     <div class="container">
       <div class="section-head">
         <span class="kicker">Visitanos</span>
-        <h2>Ubicación y horarios</h2>
+        <h2>Nuestras sucursales</h2>
+        <p class="section-sub">Dos locales en Pilar. Elegí el que te queda más cerca y reservá tu turno.</p>
       </div>
 
-      <div class="location-grid">
-        <div class="location-info">
-          <div class="info-block">
-            <h3>Dirección</h3>
-            <p>Av. Caamaño 662<br />B1631 Villa Rosa, Pilar — Buenos Aires</p>
-            <a href="https://maps.google.com/?q=Royal+Barberia+Caama%C3%B1o+662+Pilar" target="_blank" rel="noopener" class="link-gold">Cómo llegar →</a>
+      <div class="branches">
+        <article class="branch-card">
+          <header class="branch-head">
+            <span class="branch-kicker">Sucursal Caamaño</span>
+            <h3>Pilar · Villa Rosa</h3>
+          </header>
+          <div class="branch-info">
+            <div class="info-block">
+              <h4>Dirección</h4>
+              <p>Av. Caamaño 662<br />B1631 Villa Rosa, Pilar — Buenos Aires</p>
+              <a href="https://maps.google.com/?q=Royal+Barberia+Caama%C3%B1o+662+Pilar" target="_blank" rel="noopener" class="link-gold">Cómo llegar →</a>
+            </div>
+            <div class="info-block">
+              <h4>Horarios</h4>
+              <ul class="hours">
+                <li><span>Lunes a Sábado</span><span>10:00 – 20:00</span></li>
+                <li><span>Domingo</span><span>Cerrado</span></li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h4>Contacto</h4>
+              <p>
+                <a href="tel:+5491131694389" class="link-gold">+54 9 11 3169-4389</a><br />
+                <a href="https://wa.me/5491131694389" target="_blank" rel="noopener" class="link-gold">WhatsApp</a>
+              </p>
+            </div>
           </div>
-          <div class="info-block">
-            <h3>Horarios</h3>
-            <ul class="hours">
-              <li><span>Lunes a Viernes</span><span>9:00 – 20:00</span></li>
-              <li><span>Sábados</span><span>9:00 – 18:00</span></li>
-              <li><span>Domingos</span><span>Cerrado</span></li>
-            </ul>
+          <div class="branch-map">
+            <iframe
+              title="Mapa Royal Barbería sucursal Caamaño"
+              src="https://www.google.com/maps?q=Royal+Barberia+Caama%C3%B1o+662+Pilar&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="info-block">
-            <h3>Contacto</h3>
-            <p>
-              <a href="tel:+5491131694389" class="link-gold">+54 9 11 3169-4389</a><br />
-              <a href="https://wa.me/5491131694389" target="_blank" rel="noopener" class="link-gold">WhatsApp</a> ·
-              <a href="https://instagram.com/" target="_blank" rel="noopener" class="link-gold">Instagram</a>
-            </p>
+          <a href="https://royalbarberia.setmore.com" target="_blank" rel="noopener" class="btn btn-gold branch-cta">Reservar en Caamaño</a>
+        </article>
+
+        <article class="branch-card">
+          <header class="branch-head">
+            <span class="branch-kicker">Sucursal Las Piedras</span>
+            <h3>Pilar · Las Piedras</h3>
+          </header>
+          <div class="branch-info">
+            <div class="info-block">
+              <h4>Dirección</h4>
+              <p>Golf Club Golfers 2932<br />B1669 Las Piedras, Pilar — Buenos Aires</p>
+              <a href="https://maps.google.com/?q=Royal+Barberia+Golf+Club+Golfers+2932+Pilar" target="_blank" rel="noopener" class="link-gold">Cómo llegar →</a>
+            </div>
+            <div class="info-block">
+              <h4>Horarios</h4>
+              <ul class="hours">
+                <li><span>Lunes a Sábado</span><span>10:00 – 20:00</span></li>
+                <li><span>Domingo</span><span>Cerrado</span></li>
+              </ul>
+            </div>
+            <div class="info-block">
+              <h4>Contacto</h4>
+              <p>
+                <a href="tel:+541125469531" class="link-gold">011 2546-9531</a><br />
+                <a href="https://wa.me/541125469531" target="_blank" rel="noopener" class="link-gold">WhatsApp</a>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="location-map">
-          <iframe
-            title="Mapa de Barbería ROYAL"
-            src="https://www.google.com/maps?q=Royal+Barberia+Caama%C3%B1o+662+Pilar&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+          <div class="branch-map">
+            <iframe
+              title="Mapa Royal Barbería sucursal Las Piedras"
+              src="https://www.google.com/maps?q=Golf+Club+Golfers+2932+B1669+Pilar&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <a href="https://royalbarberialaspiedras.setmore.com" target="_blank" rel="noopener" class="btn btn-gold branch-cta">Reservar en Las Piedras</a>
+        </article>
       </div>
     </div>
   </section>
@@ -449,7 +535,7 @@
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
         <a href="#equipo">Equipo</a>
-        <a href="#ubicacion">Ubicación</a>
+        <a href="#sucursales">Sucursales</a>
         <a href="#reservar" data-book>Reservar</a>
       </nav>
       <div class="footer-social">
@@ -459,7 +545,11 @@
       </div>
     </div>
     <div class="footer-bottom container">
-      <p>© <span id="year"></span> Barbería ROYAL. Todos los derechos reservados.</p>
+      <p class="footer-naps">
+        <strong>Pilar · Caamaño:</strong> Av. Caamaño 662, Villa Rosa · +54 9 11 3169-4389<br />
+        <strong>Pilar · Las Piedras:</strong> Golf Club Golfers 2932 · 011 2546-9531
+      </p>
+      <p>© <span id="year"></span> Royal Barbería. Todos los derechos reservados.</p>
     </div>
   </footer>
 
