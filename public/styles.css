@@ -213,13 +213,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .gallery-tall { grid-row: span 2; }
 .gallery-wide { grid-column: span 2; }
 
-/* Layout para fotos verticales (retrato): 4 fotos en 2x2 con aspect 4:5 */
+/* Layout para fotos verticales (retrato): siempre 2 columnas (incluso mobile) */
 .gallery-portrait {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr) !important;
   grid-auto-rows: auto;
-  gap: 18px;
+  gap: 14px;
 }
 .gallery-portrait .gallery-item { aspect-ratio: 4 / 5; }
+@media (max-width: 520px) {
+  .gallery-portrait { gap: 8px; }
+}
 
 /* ---------- Team ---------- */
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
