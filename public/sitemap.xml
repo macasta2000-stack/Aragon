@@ -35,6 +35,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://royalbarberia.com/countries/los-lagartos/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/countries/pilar-del-este/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/countries/lagoon-pilar/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/countries/ayres-plaza/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/countries/pueblo-caamano/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://royalbarberia.com/#productos</loc>
     <priority>0.7</priority>
   </url>
