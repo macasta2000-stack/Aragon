@@ -24,7 +24,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 140px; }
 
 body {
   font-family: var(--body);
@@ -509,15 +509,15 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .pl-col:not(.pl-cash) { margin-right: 0; }
 
   /* Logo intermedio */
-  .brand-logo { height: 110px; }
-  .site-header.scrolled .brand-logo { height: 80px; }
+  .brand-logo { height: 76px; }
+  .site-header.scrolled .brand-logo { height: 60px; }
 
   /* Header padding más chico para que el logo no robe altura */
-  .site-header { padding: 8px 0; }
-  .site-header.scrolled { padding: 6px 0; }
+  .site-header { padding: 6px 0; }
+  .site-header.scrolled { padding: 4px 0; }
 
-  /* Hero ajusta tamaños */
-  .hero-content { padding: 110px 22px 70px; }
+  /* Hero compensa el header fijo (logo + paddings ~92px) */
+  .hero-content { padding: 130px 22px 70px; }
   .hero-title { letter-spacing: .04em; }
   .hero-lead { font-size: 1rem; }
   .hero-badges { gap: 26px 36px; padding-top: 22px; }
@@ -531,7 +531,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .footer-logo { height: 120px; }
 
   /* Service pages mobile */
-  .service-page { padding: 100px 0 60px; }
+  .service-page { padding: 130px 0 60px; }
+  .service-index-hero { padding: 130px 0 60px; }
   .service-hero-img { aspect-ratio: 4/5; max-width: 360px; }
 
   /* Products catálogo en tablet */
@@ -566,10 +567,10 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .team-grid-trio, .team-grid-duo { grid-template-columns: 1fr; gap: 24px; }
   .team-grid-trio .team-photo, .team-grid-duo .team-photo { max-width: 320px; margin: 0 auto 16px; }
-  .brand-logo { height: 88px; }
-  .site-header.scrolled .brand-logo { height: 64px; }
+  .brand-logo { height: 64px; }
+  .site-header.scrolled .brand-logo { height: 52px; }
   .footer-logo { height: 100px; }
-  .hero-content { padding: 95px 18px 60px; }
+  .hero-content { padding: 120px 18px 60px; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); letter-spacing: .03em; }
   .hero-eyebrow { font-size: .7rem; letter-spacing: .22em; }
   .hero-lead { font-size: .95rem; }
