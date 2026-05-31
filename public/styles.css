@@ -112,8 +112,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
 .hero-bg {
   position: absolute; inset: 0;
-  background: url("https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1600&q=70") center/cover no-repeat;
-  filter: grayscale(.4) contrast(1.05);
+  background: url("assets/local-interior.jpg") center/cover no-repeat;
+  filter: grayscale(.25) contrast(1.05);
   transform: scale(1.05);
 }
 .hero-overlay {
@@ -211,6 +211,14 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .gallery-item:hover img { transform: scale(1.07); filter: grayscale(0); }
 .gallery-tall { grid-row: span 2; }
 .gallery-wide { grid-column: span 2; }
+
+/* Layout para fotos verticales (retrato): 4 fotos en 2x2 con aspect 4:5 */
+.gallery-portrait {
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 18px;
+}
+.gallery-portrait .gallery-item { aspect-ratio: 4 / 5; }
 
 /* ---------- Team ---------- */
 .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -336,6 +344,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   .pl-col { font-size: 1.15rem; min-width: 74px; }
   .pl-service strong { font-size: 1.05rem; }
   .gallery { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+  .gallery-portrait { grid-template-columns: 1fr; }
   .gallery-wide { grid-column: span 1; }
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .brand-logo { height: 56px; }
