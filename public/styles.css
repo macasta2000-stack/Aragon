@@ -247,6 +247,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .testimonial .stars { color: var(--gold); letter-spacing: .15em; margin-bottom: 14px; }
 .testimonial p { font-style: italic; color: var(--white); font-family: var(--serif); font-size: 1.05rem; }
 .testimonial footer { margin-top: 18px; font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.testimonial .t-meta { color: var(--grey); letter-spacing: .06em; font-weight: 400; text-transform: none; font-size: .72rem; display: inline-block; margin-left: 6px; }
+.testimonials-cta { text-align: center; margin-top: 36px; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; }
 
 /* ---------- Location ---------- */
 .location-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: stretch; }
