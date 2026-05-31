@@ -6,7 +6,7 @@
    Reemplazá por la URL de tu Booking Page de Setmore.
    La encontrás en Setmore → Settings → Booking Page → tu enlace
    (ej: https://barberiaroyal.setmore.com).                           */
-const SETMORE_URL = "https://barberiaroyal.setmore.com";
+const SETMORE_URL = "https://royalbarberia.setmore.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   // Año dinámico en el footer
