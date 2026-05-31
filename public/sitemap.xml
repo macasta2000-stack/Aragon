@@ -55,6 +55,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://royalbarberia.com/notas/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/notas/mejores-barberias-pilar-2026/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/notas/corte-sabado-pilar/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://royalbarberia.com/notas/cortes-para-asado-country/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://royalbarberia.com/#productos</loc>
     <priority>0.7</priority>
   </url>
