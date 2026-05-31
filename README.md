@@ -1,7 +1,9 @@
-# Barbería ROYAL — Landing page
+# Royal Barbería — Landing page
 
-Landing page estática (HTML/CSS/JS, sin build) para **Barbería ROYAL**.
-Estilo clásico: paleta negro + dorado + blanco, tipografías serif/display, reservas con Setmore.
+Landing page estática (HTML/CSS/JS, sin build) para **Royal Barbería**.
+Dominio en producción: **https://royalbarberia.com**
+
+Estilo clásico: paleta negro + dorado + blanco, tipografía Cinzel + Cormorant Garamond + Montserrat, reservas con Setmore (`royalbarberia.setmore.com`).
 
 ## Estructura
 
