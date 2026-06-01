@@ -67,8 +67,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 78px; width: auto; display: block; transition: height .3s ease; }
-.site-header.scrolled .brand-logo { height: 60px; }
+.brand-logo { height: 96px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-logo { height: 78px; }
 .footer-logo { height: 160px; width: auto; display: block; margin-bottom: 8px; }
 .footer-tag { color: var(--grey); font-size: .85rem; font-style: italic; }
 .brand-name {
@@ -97,7 +97,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .nav-group { display: flex; align-items: center; gap: 28px; flex: 1 1 0; min-width: 0; }
 .nav-left { order: 1; justify-content: flex-end; }
 .nav-right { order: 3; justify-content: flex-start; }
-.brand { order: 2; flex: 0 0 auto; margin: 0 30px; }
+.brand { order: 2; flex: 0 0 auto; margin: 0 20px; }
 .nav a {
   font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--white); transition: color .2s ease; position: relative;
@@ -540,8 +540,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .pl-col:not(.pl-cash) { margin-right: 0; }
 
   /* Logo CENTRADO en mobile (ya hereda center desde base), toggle absoluto a la derecha */
-  .brand-logo { height: 66px; }
-  .site-header.scrolled .brand-logo { height: 54px; }
+  .brand-logo { height: 90px; }
+  .site-header.scrolled .brand-logo { height: 74px; }
   .nav-toggle { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); }
 
   /* Header padding más chico para que el logo no robe altura */
@@ -598,8 +598,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .team-grid-trio, .team-grid-duo { grid-template-columns: 1fr; gap: 24px; }
   .team-grid-trio .team-photo, .team-grid-duo .team-photo { max-width: 320px; margin: 0 auto 16px; }
-  .brand-logo { height: 60px; }
-  .site-header.scrolled .brand-logo { height: 50px; }
+  .brand-logo { height: 88px; }
+  .site-header.scrolled .brand-logo { height: 72px; }
   .footer-logo { height: 100px; }
   .hero-content { padding: 100px 18px 60px; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); letter-spacing: .03em; }
