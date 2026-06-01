@@ -67,8 +67,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 240px; width: auto; display: block; transition: height .3s ease; }
-.site-header.scrolled .brand-logo { height: 180px; }
+.brand-logo { height: 78px; width: auto; display: block; transition: height .3s ease; }
+.site-header.scrolled .brand-logo { height: 60px; }
 .footer-logo { height: 160px; width: auto; display: block; margin-bottom: 8px; }
 .footer-tag { color: var(--grey); font-size: .85rem; font-style: italic; }
 .brand-name {
@@ -88,11 +88,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
   box-shadow: 0 1px 0 var(--line), 0 8px 30px rgba(0,0,0,.5);
   padding: 8px 0;
 }
-/* Header en dos filas: logo centrado arriba, menú centrado debajo.
-   Evita que el logo grande centrado pise los links del nav (la R sobre PRODUCTOS). */
-.header-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; position: relative; }
-.brand { margin: 0; }
-.nav { display: flex; align-items: center; gap: 30px; }
+/* Header compacto en una fila: logo centrado con el menú a los costados.
+   .nav usa display:contents → sus <a> se vuelven items del .header-inner, así
+   el logo (order:2) queda en el medio y los últimos 3 links van a la derecha.
+   En mobile el media query devuelve .nav a flex (panel deslizante). */
+.header-inner { display: flex; align-items: center; justify-content: center; position: relative; }
+.nav { display: contents; }
+.nav-group { display: flex; align-items: center; gap: 28px; flex: 1 1 0; min-width: 0; }
+.nav-left { order: 1; justify-content: flex-end; }
+.nav-right { order: 3; justify-content: flex-start; }
+.brand { order: 2; flex: 0 0 auto; margin: 0 30px; }
 .nav a {
   font-size: .82rem; letter-spacing: .08em; text-transform: uppercase;
   color: var(--white); transition: color .2s ease; position: relative;
@@ -125,7 +130,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
     radial-gradient(circle at 30% 30%, rgba(230,168,23,.12), transparent 55%),
     linear-gradient(180deg, rgba(12,12,12,.78) 0%, rgba(12,12,12,.7) 40%, rgba(12,12,12,.95) 100%);
 }
-.hero-content { position: relative; z-index: 2; padding: 340px 22px 80px; max-width: 760px; }
+.hero-content { position: relative; z-index: 2; padding: 130px 22px 80px; max-width: 760px; }
 .hero-eyebrow {
   font-size: .8rem; letter-spacing: .3em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 18px;
@@ -447,7 +452,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .breadcrumb a:hover { opacity: .75; }
 .breadcrumb span { margin: 0 6px; }
 
-.service-page { padding: 340px 0 80px; }
+.service-page { padding: 130px 0 80px; }
 .service-hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; margin-bottom: 80px; }
 .service-hero-text .kicker { display: inline-block; margin-bottom: 14px; }
 .service-hero-text h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin-bottom: 22px; font-weight: 700; letter-spacing: .03em; }
@@ -477,7 +482,7 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
 .service-cta-block p { color: var(--grey); margin-bottom: 24px; }
 
 /* Páginas índice de servicios */
-.service-index-hero { padding: 340px 0 80px; }
+.service-index-hero { padding: 130px 0 80px; }
 .service-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-bottom: 60px; }
 .service-card {
   background: var(--black-3); border: 1px solid var(--line); border-radius: var(--radius);
@@ -507,11 +512,12 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
    =================================================================== */
 @media (max-width: 880px) {
   .nav {
-    position: fixed; inset: 0 0 0 auto; width: min(78vw, 320px);
+    display: flex; position: fixed; inset: 0 0 0 auto; width: min(78vw, 320px);
     background: rgba(10,10,10,.98); flex-direction: column; justify-content: center;
     gap: 28px; transform: translateX(100%); transition: transform .35s ease;
     box-shadow: -20px 0 60px rgba(0,0,0,.6); z-index: 105;
   }
+  .nav-group { flex: none; flex-direction: column; width: 100%; gap: 28px; align-items: center; justify-content: center; }
   .nav.open { transform: translateX(0); }
   .nav a { font-size: 1rem; }
   .nav-cta { margin-top: 10px; }
@@ -534,8 +540,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .pl-col:not(.pl-cash) { margin-right: 0; }
 
   /* Logo CENTRADO en mobile (ya hereda center desde base), toggle absoluto a la derecha */
-  .brand-logo { height: 130px; }
-  .site-header.scrolled .brand-logo { height: 96px; }
+  .brand-logo { height: 66px; }
+  .site-header.scrolled .brand-logo { height: 54px; }
   .nav-toggle { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); }
 
   /* Header padding más chico para que el logo no robe altura */
@@ -543,7 +549,7 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .site-header.scrolled { padding: 4px 0; }
 
   /* Hero compensa el header fijo (logo centrado más grande ~145px) */
-  .hero-content { padding: 170px 22px 70px; }
+  .hero-content { padding: 110px 22px 70px; }
   .hero-title { letter-spacing: .04em; }
   .hero-lead { font-size: 1rem; }
   .hero-badges { gap: 26px 36px; padding-top: 22px; }
@@ -557,8 +563,8 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .footer-logo { height: 120px; }
 
   /* Service pages mobile */
-  .service-page { padding: 180px 0 60px; }
-  .service-index-hero { padding: 180px 0 60px; }
+  .service-page { padding: 110px 0 60px; }
+  .service-index-hero { padding: 110px 0 60px; }
   .service-hero-img { aspect-ratio: 4/5; max-width: 360px; }
 
   /* Products catálogo en tablet */
@@ -592,10 +598,10 @@ ol.check-list li::before { content: counter(step); counter-increment: step; font
   .team-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .team-grid-trio, .team-grid-duo { grid-template-columns: 1fr; gap: 24px; }
   .team-grid-trio .team-photo, .team-grid-duo .team-photo { max-width: 320px; margin: 0 auto 16px; }
-  .brand-logo { height: 105px; }
-  .site-header.scrolled .brand-logo { height: 78px; }
+  .brand-logo { height: 60px; }
+  .site-header.scrolled .brand-logo { height: 50px; }
   .footer-logo { height: 100px; }
-  .hero-content { padding: 150px 18px 60px; }
+  .hero-content { padding: 100px 18px 60px; }
   .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); letter-spacing: .03em; }
   .hero-eyebrow { font-size: .7rem; letter-spacing: .22em; }
   .hero-lead { font-size: .95rem; }
