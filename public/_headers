@@ -6,8 +6,11 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# CSS/JS revalidan en cada carga (ETag → 304 barato). Evita que el navegador
+# sirva versiones viejas y que los cambios queden "invisibles". El nombre de
+# archivo se versiona con ?v=YYYYMMDD en el HTML para romper cachés ya guardadas.
 /styles.css
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
 
 /script.js
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
