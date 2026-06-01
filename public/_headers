@@ -1,7 +1,12 @@
+# HTML y todo lo no listado abajo: no-cache → el navegador revalida con ETag
+# (304 barato) y nunca queda pegado a un index.html viejo que apunte a un
+# styles.css sin versionar. Las reglas más específicas de abajo (/assets,
+# /styles.css, /script.js) definen su propio cache y ganan sobre esta.
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
+  Cache-Control: no-cache
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
