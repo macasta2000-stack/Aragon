@@ -422,8 +422,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .footer-nav { display: flex; gap: 22px; flex-wrap: wrap; }
 .footer-nav a { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--grey); transition: color .2s; }
 .footer-nav a:hover { color: var(--gold); }
-.footer-social { display: flex; gap: 18px; }
+.footer-social { display: flex; gap: 18px; align-items: center; }
 .footer-social a { font-size: .82rem; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.footer-ig {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 18px; border-radius: 999px;
+  border: 1.5px solid var(--gold); background: rgba(230,168,23,.10);
+  font-weight: 600; color: var(--gold);
+  transition: background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.footer-ig:hover { background: var(--gold); color: #1a1206; box-shadow: 0 6px 20px rgba(230,168,23,.32); }
 .footer-bottom { border-top: 1px solid rgba(246,244,239,.08); padding-top: 22px; padding-bottom: 26px; }
 .footer-bottom p { font-size: .78rem; color: var(--grey); text-align: center; }
 
