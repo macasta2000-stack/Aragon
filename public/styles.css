@@ -64,6 +64,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
 .btn-lg { padding: 16px 34px; font-size: .85rem; }
 .btn-xl { padding: 19px 46px; font-size: .95rem; }
+.btn-ig { gap: 9px; }
 
 /* ---------- Brand mark ---------- */
 .brand { display: flex; align-items: center; gap: 12px; }
@@ -392,6 +393,10 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.15; l
 }
 .team-grid-duo .team-photo { aspect-ratio: 4/5; }
 @media (max-width: 560px) { .team-grid-duo { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Solo team layout (Las Piedras: 1 barbero) */
+.team-grid.team-grid-solo { grid-template-columns: minmax(0, 320px); justify-content: center; gap: 36px; }
+.team-grid-solo .team-photo { aspect-ratio: 4/5; }
 
 .footer-naps { color: var(--grey); font-size: .82rem; line-height: 1.65; margin-bottom: 12px; }
 .footer-naps strong { color: var(--gold); }
